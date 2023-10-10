@@ -1,0 +1,26 @@
+{
+  "name": "grib-ts",
+  "version": "1.0.0",
+  "description": "GRIB2 parser",
+  "scripts": {
+    "dev": "tsc -w -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtmosWX/grib-ts.git"
+  },
+  "keywords": [
+    "grib",
+    "grib2"
+  ],
+  "author": "Austin Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AtmosWX/grib-ts/issues"
+  },
+  "homepage": "https://github.com/AtmosWX/grib-ts#readme",
+  "devDependencies": {
+    "@types/node": "^20.8.4",
+    "typescript": "^5.2.2"
+  }
+}
