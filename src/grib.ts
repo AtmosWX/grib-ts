@@ -39,8 +39,6 @@ export class GribReader {
       const bitmap = readBitmap(this.reader);
       const data = readData(this.reader);
 
-      this.reader.step(data.length - 5);
-
       const end = this.reader.string(4);
       if (end != "7777") {
         throw new Error("Expected end of GRIB message \"7777\", found: " + end);

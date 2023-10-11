@@ -6,8 +6,8 @@ export enum DataRepresentationTemplateNumber {
 };
 
 export type DataRepresentationTemplate =
-  SimplePacking |
-  ComplexPackingSpatialDifferencing;
+  | SimplePacking
+  | ComplexPackingSpatialDifferencing;
 
 export type SimplePacking = {
   referenceValue: number;
@@ -34,9 +34,13 @@ export type ComplexPackingSpatialDifferencing = {
   groupLengthInc: number;
   lastGroupTrueLength: number;
   groupLengthBitCount: number;
-  spatialDifferenceOrder: number;
+  spatialDifferenceOrder: SpatialDifferencingOrder;
   spatialDifferenceOctetCount: number;
 };
+
+export enum SpatialDifferencingOrder {
+  Second = 2,
+}
 
 export function readDataRepresentationTemplate(reader: BufferReader, templateNumber: number): DataRepresentationTemplate {
   switch (templateNumber) {
